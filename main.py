@@ -1644,29 +1644,38 @@ print(f1(3))
 # print(typed_fn3("Hello", "World", z=5))
 
 
-def args_decorator(tx=None, decorator_text=""):
-    def my_decorator(func):
-        def wrap(*args):
-            print(decorator_text, end="")
-            func(*args)
+# def args_decorator(tx=None, decorator_text=""):
+#     def my_decorator(func):
+#         def wrap(*args):
+#             print(decorator_text, end="")
+#             func(*args)
+#
+#         return wrap
+#
+#     if tx is None:
+#         return my_decorator
+#     else:
+#         return my_decorator(tx)
+#
+#
+# @args_decorator(decorator_text="Hello, ")
+# def hello_world(text):
+#     print(text)
+#
+#
+# @args_decorator
+# def hello_world2(text):
+#     print(text)
+#
+#
+# hello_world("world!")
+# hello_world2("Hi!")
+#
+# str1 = "Я изучая Nython. Мне нравится Nython. Nython очень интересный язык программирования."
 
-        return wrap
+# s1 = "Час в 24-часовом формате от 00 до 23. 2021-06-15T21:58. Минуты, в диапазоне от 00 до 59. 2021-06-15T01:09."# rg = r'[0-2][0-9]:[0-5][0-9]'# print(re.findall(rg, s1)) 
 
-    if tx is None:
-        return my_decorator
-    else:
-        return my_decorator(tx)
+st = r"Замените в этой стрОке все пОявления буквы ""О"", крОме первОгО и пОследнегО вхождения."print(st.replace("О", "о"))
 
 
-@args_decorator(decorator_text="Hello, ")
-def hello_world(text):
-    print(text)
-
-
-@args_decorator
-def hello_world2(text):
-    print(text)
-
-
-hello_world("world!")
-hello_world2("Hi!")
+print(re.findall('[+]?7\d{9}', s))
