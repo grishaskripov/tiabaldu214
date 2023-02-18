@@ -551,14 +551,14 @@ import time
 #
 # hello()
 
-def get_sum(a, b):
-    x = 1
-    print(x)
-    print(a + b)
-
-a = 2
-b = 5
-get_sum(a, b)
+# def get_sum(a, b):
+#     x = 1
+#     print(x)
+#     print(a + b)
+#
+# a = 2
+# b = 5
+# get_sum(a, b)
 
 
 # Функции
@@ -1167,30 +1167,30 @@ get_sum(a, b)
 # for t in c:
 #     print(t('abc_'))
 
-def inc(n):
-    return lambda x: n + x
-
-
-f = inc(42)
-print(f(3))
-
-inc1 = (lambda n: lambda x: n + x)
-
-f3 = inc1(42)
-print(f3(3))
-print("!!!", (lambda n: lambda x: n + x)(42)(3))
-
-
-def inc2(n):
-    def wrap(x):
-        return n + x
-
-    return wrap
-
-
-f1 = inc2(42)
-print(f1(3))
-
+# def inc(n):
+#     return lambda x: n + x
+#
+#
+# f = inc(42)
+# print(f(3))
+#
+# inc1 = (lambda n: lambda x: n + x)
+#
+# f3 = inc1(42)
+# print(f3(3))
+# print("!!!", (lambda n: lambda x: n + x)(42)(3))
+#
+#
+# def inc2(n):
+#     def wrap(x):
+#         return n + x
+#
+#     return wrap
+#
+#
+# f1 = inc2(42)
+# print(f1(3))
+#
 
 # def rect_paral_square(a, b, c):
 #     def rect_square(i, j):
@@ -1347,29 +1347,29 @@ print(f1(3))
 # for t in c:
 #     print(t('abc_'))
 
-def inc(n):
-    return lambda x: n + x
-
-
-f = inc(42)
-print(f(3))
-
-inc1 = (lambda n: lambda x: n + x)
-
-f3 = inc1(42)
-print(f3(3))
-print("!!!", (lambda n: lambda x: n + x)(42)(3))
-
-
-def inc2(n):
-    def wrap(x):
-        return n + x
-
-    return wrap
-
-
-f1 = inc2(42)
-print(f1(3))
+# def inc(n):
+#     return lambda x: n + x
+#
+#
+# f = inc(42)
+# print(f(3))
+#
+# inc1 = (lambda n: lambda x: n + x)
+#
+# f3 = inc1(42)
+# print(f3(3))
+# print("!!!", (lambda n: lambda x: n + x)(42)(3))
+#
+#
+# def inc2(n):
+#     def wrap(x):
+#         return n + x
+#
+#     return wrap
+#
+#
+# f1 = inc2(42)
+# print(f1(3))
 
 # filter(func, iterable)
 
@@ -1659,6 +1659,8 @@ print(f1(3))
 #
 #
 # @args_decorator(decorator_text="Hello, ")
+
+
 # def hello_world(text):
 #     print(text)
 #
@@ -1683,3 +1685,28 @@ print(f1(3))
 # s = input('Введите дату в формате dd-mm-YYYY:')print(s)reg = r'([1-3]\w)-([0-1]\w)-([1-2]\w{3})'print(re.findall(reg, s))
 #
 # s = "<p>Изображение <img alt='картинка' src ='bg.jpg'> - фон страницы</p>"reg = r'<img\s+[^>]*src\s*=>'print(re.findall(reg, s))
+
+# def merge_sort(a):    n = len(a)      if n < 2:        return a    left = merge_sort(a[:n // 2])      right = merge_sort(a[n // 2: n])      i = j = 0    res = []    while i < len(left) or j < len(right):        if not i < len(left):            res.append(right[j])            j += 1        elif not j < len(right):            res.append(left[i])            i += 1        elif left[i] < right[j]:            res.append(left[i])            i += 1        else:            res.append(right[j])            j += 1    return resarray = [randint(1, 99) for i in range(10000)]start = time.monotonic()array = merge_sort(array)res = time.monotonic() - startprint(round(res, 3), 'sec')
+#
+#
+#
+# def bubble(array):    for i in range(len(array) - 1):        for j in range(len(array) - i - 1):            if array[j] > array[j + 1]:                array[j], array[j + 1] = array[j + 1], array[j]lst = [randint(1, 99) for i in range(10000)]start = time.monotonic()bubble(lst)res = time.monotonic() - startprint(round(res, 3), 'sec')
+
+
+# f = open('text.txt') #mode='r'
+# print(*f)
+# print(f)
+# f.close()
+# print(f.closed)
+
+# f = open('text.txt')
+# print(f.readline())
+# print(f.readline(4))
+# for line in f:
+#     print(line)
+# print(len(f.readlines()))
+# f.close()
+
+f = open('textq.txt', 'w')
+f.write("Hello\nWorld!\n")
+f.close()
