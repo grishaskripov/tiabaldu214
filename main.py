@@ -29,7 +29,7 @@
 # a = b
 # b = c
 # a, b = b, a
-import time
+
 
 # print(6+2)
 # print(6/2)
@@ -1453,6 +1453,7 @@ import time
 # @my_decorator  # декоратор
 # def func_test():  # декорируемая функция
 #     print('Hello, I am func "func_test"')
+
 #
 #
 # func_test()
@@ -1670,43 +1671,3 @@ import time
 #     print(text)
 #
 #
-# hello_world("world!")
-# hello_world2("Hi!")
-#
-# str1 = "Я изучая Nython. Мне нравится Nython. Nython очень интересный язык программирования."
-
-# s1 = "Час в 24-часовом формате от 00 до 23. 2021-06-15T21:58. Минуты, в диапазоне от 00 до 59. 2021-06-15T01:09."# rg = r'[0-2][0-9]:[0-5][0-9]'# print(re.findall(rg, s1)) 
-
-# st = r"Замените в этой стрОке все пОявления буквы ""О"", крОме первОгО и пОследнегО вхождения."print(st.replace("О", "о"))
-#
-#
-# print(re.findall('[+]?7\d{9}', s))
-
-# s = input('Введите дату в формате dd-mm-YYYY:')print(s)reg = r'([1-3]\w)-([0-1]\w)-([1-2]\w{3})'print(re.findall(reg, s))
-#
-# s = "<p>Изображение <img alt='картинка' src ='bg.jpg'> - фон страницы</p>"reg = r'<img\s+[^>]*src\s*=>'print(re.findall(reg, s))
-
-# def merge_sort(a):    n = len(a)      if n < 2:        return a    left = merge_sort(a[:n // 2])      right = merge_sort(a[n // 2: n])      i = j = 0    res = []    while i < len(left) or j < len(right):        if not i < len(left):            res.append(right[j])            j += 1        elif not j < len(right):            res.append(left[i])            i += 1        elif left[i] < right[j]:            res.append(left[i])            i += 1        else:            res.append(right[j])            j += 1    return resarray = [randint(1, 99) for i in range(10000)]start = time.monotonic()array = merge_sort(array)res = time.monotonic() - startprint(round(res, 3), 'sec')
-#
-#
-#
-# def bubble(array):    for i in range(len(array) - 1):        for j in range(len(array) - i - 1):            if array[j] > array[j + 1]:                array[j], array[j + 1] = array[j + 1], array[j]lst = [randint(1, 99) for i in range(10000)]start = time.monotonic()bubble(lst)res = time.monotonic() - startprint(round(res, 3), 'sec')
-
-
-# f = open('text.txt') #mode='r'
-# print(*f)
-# print(f)
-# f.close()
-# print(f.closed)
-
-# f = open('text.txt')
-# print(f.readline())
-# print(f.readline(4))
-# for line in f:
-#     print(line)
-# print(len(f.readlines()))
-# f.close()
-
-f = open('textq.txt', 'w')
-f.write("Hello\nWorld!\n")
-f.close()
