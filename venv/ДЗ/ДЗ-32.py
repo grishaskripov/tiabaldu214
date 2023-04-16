@@ -63,9 +63,31 @@
 # print(row)
 # #Do you need to install a parser library?
 
+# from bs4 import BeautifulSoup
+#
+# f = open('index.html').read()
+# soup = BeautifulSoup(f, "https://yandex.ru/images").read
+# row = soup.find_all("div", class_="PopularRequestList-Item PopularRequestList-Item_pos_3")
+# print(row)
+
+
+import requests
 from bs4 import BeautifulSoup
 
-f = open('index.html').read()
-soup = BeautifulSoup(f, "https://yandex.ru/images").read
-row = soup.find_all("div", class_="PopularRequestList-Item PopularRequestList-Item_pos_3")
-print(row)
+
+def get_data(html):
+    soup = BeautifulSoup(html,"lxml") #"html.parser"
+    p2 = soup.find_all("span", class_="card-mini__title")
+
+
+def get_html(url):
+    res = requests.get(url)
+    return res.text
+
+
+def main():
+    url = "https://lenta.ru/"
+    print(get_html(url))
+
+    if __name__ == '__name__':
+        main()
